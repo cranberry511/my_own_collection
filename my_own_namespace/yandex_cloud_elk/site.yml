@@ -1,0 +1,9 @@
+---
+- name: Install and configure my_own_namespace.yandex_cloud_elk
+  hosts: localhost
+  collections:
+    - my_own_namespace.yandex_cloud_elk
+  tasks:
+    - name: Include my_own_role role from the collection
+      ansible.builtin.include_role:
+        name: my_own_role
